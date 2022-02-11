@@ -34,4 +34,12 @@ const os = require("os")
 // FS was here, but I don't need it.
 const io = require("socket.io-client");
 
-// Further coding to go.
+const cfg = JSON.parse(require('./cfg.json'));
+
+const client = io("https://rmtrollbox.eu-gb.mybluemix.net/", {
+  "force new": true
+})
+
+client.on('connect', function(data) {
+  client.emit('user joined', cfg.name + "[" + cfg.prefix + "]", cfg.color)
+})
