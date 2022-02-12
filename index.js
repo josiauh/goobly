@@ -34,7 +34,11 @@ const os = require("os")
 // FS was here, but I don't need it.
 const io = require("socket.io-client");
 // VM was also here but we don't need to run isolations
-const cfg = JSON.parse(require('./cfg.json'));
+const cfg = {
+   "color": "#c4fffe",
+   "prefix": "t*",
+   "name": "Taggy"
+}
 
 const tagt = '<style/confuse=node/html=parser/amogus>\n/* This is Taggy\'s Tags. */ nomsg { color: transparent; }\n matrix { color: green; background-color: black; }  '
 
