@@ -70,7 +70,8 @@ client.on('message', function(data) {
           } else {
              client.send("Not valid! Is this marked $ or in the t*help message?")
           }
-        } else if (data.msg.startsWith(command("req"))) {
+        } 
+      } else if (data.msg.startsWith(command("req"))) {
           fs.appendFile('requests.txt', args, err => {
              if (err) {
                 client.send("Did you know that *" + err + "*?")
@@ -81,6 +82,5 @@ client.on('message', function(data) {
         } else {
           client.send("Not valid! Is this in the t*help message?")
         }
-      }
    }
 })
