@@ -33,7 +33,7 @@ function tocsp(sec) {
 const os = require("os")
 const fs = require('fs')
 const io = require("socket.io-client");
-// VM was also here but we don't need to run isolations
+// VM was also here but we don't need to run isolations lol
 const cfg = {
    "color": "#c4fffe",
    "prefix": "t*",
