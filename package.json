@@ -1,0 +1,15 @@
+{
+  "name": "taggyrm",
+  "version": "1.0.0",
+  "description": "the taggy bot for the rmtrollbox, managing it all # Excuse me but RMTROLLBOX? It's a copy of [Party Trollbox](trollbox.party). just with HTML.",
+  "main": "index.js",
+  "dependencies": {
+    "socket.io-client": "^2.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
