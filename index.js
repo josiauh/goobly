@@ -1,3 +1,6 @@
+
+
+
 function decodeEntities(encodedString) {
     var translate_re = /&(nbsp|amp|quot|lt|gt);/g;
     var translate = {
@@ -58,9 +61,11 @@ client.on('connect', function(data) {
 })
 
 client.on('message', function(data) {
-   var argsl = data.msg.split()
+   var argsl = data.msg.split(' ')
+   argsl.shift();
    var args = argsl.join(' ')
    if (data.msg.startsWith(cfg.prefix)) {
+      console.log(argsl)
       if (data.msg.startsWith(command("help"))) {
         if (args == '') {
           client.send("Taggy Night v1.2\nt*req ^request^ - Request anything\nt*help ^command^ $ - Show this.\nJosiah 2022, With that cool badge, you know?\ncommands marked $ will not be able to be used with the command argument in the t*help.")
@@ -72,7 +77,7 @@ client.on('message', function(data) {
           }
         } 
       } else if (data.msg.startsWith(command("req"))) {
-          fs.appendFile('requests.txt', args, err => {
+          fs.appendFile('requests.txt', args + "\n", err => {
              if (err) {
                 client.send("Did you know that *" + err + "*?")
                 return
