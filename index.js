@@ -68,7 +68,7 @@ client.on('message', function(data) {
       console.log(argsl)
       if (data.msg.startsWith(command("help"))) {
         if (args == '') {
-          client.send("Taggy Night v1.2\nt*req ^request^ - Request anything\nt*help ^command^ $ - Show this.\nJosiah 2022, With that cool badge, you know?\ncommands marked $ will not be able to be used with the command argument in the t*help.")
+          client.send("Taggy Night v1.2\nt*req ^request^ - Request anything\nt*help ^command^ $ - Show this.\nJosiah 2022, the red one, goes on both tbparty and rmtb, you know?\ncommands marked $ will not be able to be used with the command argument in the t*help.")
         } else {
           if (args == "req") {
              client.send("Usage:\nt*req ^request^\nWhat does it do, in developer?\nUses the FS package to make a line in a text file named requests.txt with the exact arguments.\nWhat does it do, in normal?\n Writes the arguments to a requests file.")
