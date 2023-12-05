@@ -48,7 +48,7 @@ function command(base) {
 
 const tagt = '<style/confuse=node/html=parser/amogus>\n/* This is Taggy\'s Tags. */ nomsg { color: transparent; }\n matrix { color: green; background-color: black; }  '
 
-const client = io("https://rmtrollbox.eu-gb.mybluemix.net/", {
+const client = io("https://box.km.mk/", {
   "force new": true
 })
 
