@@ -59,7 +59,15 @@ client.on('message', function(data) {
    var argsl = data.msg.split(' ')
    argsl.shift();
    var args = argsl.join(' ')
-       if (data.msg.includes("goober")) {
+   if (data.msg.includes("goober")) {
          client.send("goober indeed")
-     }
+   }
+    if (data.msg.startsWith(command("help"))) {
+        client.send(`
+            This is goobly.
+            * goober *: goober indeed. 
+        `)
+    }
+
+    }
 })
