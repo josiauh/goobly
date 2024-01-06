@@ -68,5 +68,4 @@ client.on('message', function(data) {
             * goober *: goober indeed. 
         `)
     }
-    )
 })
