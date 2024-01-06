@@ -46,13 +46,13 @@ function command(base) {
    return cfg.prefix + base
 }
 
-const client = io("https://box.km.mk/", {
+const client = io("https://www.windows93.net/trollbox", {
   "force new": true
 })
 
 client.on('connect', function(data) {
   client.emit('user joined', cfg.name + "[" + cfg.prefix + "]", cfg.color)
-  client.send("I'm here!")
+  client.send("hello")
 })
 
 client.on('message', function(data) {
