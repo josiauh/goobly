@@ -46,8 +46,16 @@ function command(base) {
    return cfg.prefix + base
 }
 
-const client = io("https://www.windows93.net/trollbox", {
-  "force new": true
+const client = io("http://www.windows93.net:8081", {
+  path: '/socket.io',
+  transportOptions: {
+    polling: {
+      extraHeaders: {
+        "Origin": "http://www.windows93.net",
+        "Referer": "http://www.windows93.net/trollbox/index.php"
+      }
+    }
+  }
 })
 
 client.on('connect', function(data) {
